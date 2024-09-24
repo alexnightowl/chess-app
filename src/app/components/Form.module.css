@@ -1,0 +1,63 @@
+.container {
+    margin-bottom: 1rem;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 1rem;
+    color: #333;
+}
+
+.input {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    border: 1px solid #6a0dad; /* Темно-пурпурний колір для рамки */
+    margin-top: 0.5rem;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #4b0082; /* Колір рамки при фокусі */
+}
+
+.error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.submitButton {
+    background-color: #6a0dad;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.submitButton:hover:not(:disabled) {
+    background-color: #4b0082;
+}
+
+/* Стиль для повідомлення про помилки */
+.error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}

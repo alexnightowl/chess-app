@@ -7,17 +7,18 @@ import {useMutation} from "@blitzjs/rpc"
 export function LogoutButton() {
   const router = useRouter()
   const [logoutMutation] = useMutation(logout)
+
+  const handleLogout = async () => {
+    await logoutMutation()
+    router.refresh()
+  }
+
   return (
-    <>
       <button
         className={styles.button}
-        onClick={async () => {
-          await logoutMutation()
-          router.refresh()
-        }}
+        onClick={handleLogout}
       >
         Logout
       </button>
-    </>
   )
 }

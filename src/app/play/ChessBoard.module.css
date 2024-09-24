@@ -1,0 +1,4 @@
+.chessPageWrapper {
+    height: calc(100vh - 80px - 85px - 40px);
+    border: 1px solid red;
+}
