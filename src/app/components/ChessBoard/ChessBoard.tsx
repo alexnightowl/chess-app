@@ -8,7 +8,7 @@ import s from "./ChessBoard.module.css";
 const ChessBoard: React.FC = () => {
   const game = useRef(new Chess());
   const [gamePosition, setGamePosition] = useState<string>(game.current.fen());
-  const [stockfishLevel, setStockfishLevel] = useState(2);
+  const [stockfishLevel, setStockfishLevel] = useState(0);
   const [worker, setWorker] = useState<Worker | null>(null);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const ChessBoard: React.FC = () => {
   }, []);
 
   const levels = {
-    "Easy 🤓": 2,
+    "Easy 🤓": 0,
     "Medium 🧐": 8,
     "Hard 😵": 18,
   };
